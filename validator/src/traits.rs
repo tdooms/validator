@@ -38,25 +38,25 @@ impl<'a> HasLen for Cow<'a, str> {
     }
 }
 
-impl<'a> HasLen for implicit_clone::sync::IString {
+impl<'a> HasLen for &'a implicit_clone::sync::IString {
     fn length(&self) -> u64 {
         self.len() as u64
     }
 }
 
-impl<'a, T: implicit_clone::ImplicitClone> HasLen for implicit_clone::sync::IArray<T> {
+impl<'a, T: implicit_clone::ImplicitClone> HasLen for &'a implicit_clone::sync::IArray<T> {
     fn length(&self) -> u64 {
         self.len() as u64
     }
 }
 
-impl<'a> HasLen for implicit_clone::unsync::IString {
+impl<'a> HasLen for &'a implicit_clone::unsync::IString {
     fn length(&self) -> u64 {
         self.len() as u64
     }
 }
 
-impl<'a, T: implicit_clone::ImplicitClone> HasLen for implicit_clone::unsync::IArray<T> {
+impl<'a, T: implicit_clone::ImplicitClone> HasLen for &'a implicit_clone::unsync::IArray<T> {
     fn length(&self) -> u64 {
         self.len() as u64
     }
