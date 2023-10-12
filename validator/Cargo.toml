@@ -23,6 +23,7 @@ card-validate = { version = "2.2", optional = true }
 phonenumber = { version = "0.3", optional = true }
 unic-ucd-common = { version = "0.9", optional = true }
 indexmap = {version = "1", features = ["serde-1"], optional = true }
+implicit-clone = "0.4"
 
 
 [features]
