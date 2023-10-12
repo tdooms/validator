@@ -8,7 +8,7 @@ use syn::spanned::Spanned;
 lazy_static! {
     pub static ref COW_TYPE: Regex = Regex::new(r"Cow<'[a-z]+,str>").unwrap();
     pub static ref LEN_TYPE: Regex =
-        Regex::new(r"(Option<)?((Vec|HashMap|HashSet|BTreeMap|BTreeSet|IndexMap|IndexSet)<|\[)")
+        Regex::new(r"(Option<)?((Vec|HashMap|HashSet|BTreeMap|BTreeSet|IndexMap|IndexSet|IString|IArray)<|\[)")
             .unwrap();
 }
 
